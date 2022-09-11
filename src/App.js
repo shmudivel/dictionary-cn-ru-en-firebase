@@ -26,11 +26,11 @@ function App() {
   const [words, setWords] = useState([]);
   const [input, setInput] = useState('');
 
-  // Create todo
+  // Create word
   const createWord = async (e) => {
     e.preventDefault(e);
     if (input === '') {
-      alert('Please enter a valid todo');
+      alert('Please enter a word');
       return;
     }
     await addDoc(collection(db, 'words'), {
@@ -40,7 +40,7 @@ function App() {
     setInput('');
   };
 
-  // Read todo from firebase
+  // Read 'word' from firebase
   useEffect(() => {
     const q = query(collection(db, 'words'));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -53,14 +53,14 @@ function App() {
     return () => unsubscribe();
   }, []);
 
-  // Update todo in firebase
+  // Update word in firebase
   const toggleComplete = async (word) => {
     await updateDoc(doc(db, 'words', word.id), {
       completed: !word.completed,
     });
   };
 
-  // Delete todo
+  // Delete word
   const deleteWord = async (id) => {
     await deleteDoc(doc(db, 'words', id));
   };
