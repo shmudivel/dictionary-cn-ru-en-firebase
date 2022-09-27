@@ -1,3 +1,6 @@
+xlsx to csv through "rowy" to firestore-firebase
+https://www.rowy.io/blog/import-csv-to-firestore
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
