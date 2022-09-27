@@ -15,8 +15,18 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
     <li className={word.completed ? style.liComplete : style.li}>
       <div className={style.row}>
         <input onChange={() => toggleComplete(word)} type='checkbox' checked={word.completed ? 'checked' : ''} />
+
+
+        
+        
         <p onClick={() => toggleComplete(word)} className={word.completed ? style.textComplete : style.text}>
-          {word.text}
+          {word.english}
+        </p>
+        <p onClick={() => toggleComplete(word)} className={word.completed ? style.textComplete : style.text}>
+          {word.russian}
+        </p>
+        <p onClick={() => toggleComplete(word)} className={word.completed ? style.textComplete : style.text}>
+          {word.chinese}
         </p>
       </div>
       <button onClick={() => deleteWord(word.id)}>{<FaRegTrashAlt />}</button>
