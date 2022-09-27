@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlinePlus } from 'react-icons/ai';
+//import { AiOutlinePlus } from 'react-icons/ai';
 import Word from './Word';
 import { db } from './firebase';
 import {
@@ -18,7 +18,7 @@ const style = {
   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
   form: `p-2 justify-between`,
   input: `border p-2 w-full text-xl`,
-  button: `border p-4 ml-2 bg-purple-500 text-slate-100`,
+  button: `border text-2xl p-2 w-full bg-purple-500 hover:bg-purple-600 text-slate-100`,
   count: `text-center p-2`,
 };
 
@@ -117,7 +117,7 @@ function App() {
           />
 
           <button className={style.button}>
-            <AiOutlinePlus size={30} />
+             Submit
           </button>
         </form>
         <ul>
@@ -132,7 +132,7 @@ function App() {
 
           {words.filter((word) => {
             if (searchTerm === "") {
-              return word
+              return ''
             } else if (
               word.english.toLowerCase().includes(searchTerm.toLowerCase())
               || word.russian.toLowerCase().includes(searchTerm.toLowerCase())
@@ -153,7 +153,7 @@ function App() {
           })}
         </ul>
         {words.length < 1 ? null : (
-          <p className={style.count}>{`You have ${words.length} words`}</p>
+          <p className={style.count}>{`Dictionary have ${words.length} words`}</p>
         )}
       </div>
     </div>
