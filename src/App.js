@@ -27,11 +27,12 @@ function App() {
   const [english, setEnglish] = useState('');
   const [russian, setRussian] = useState('');
   const [chinese, setChinese] = useState('');
+  const [pinyin, setPinyin] = useState('');
 
   // Create word
   const createWord = async (e) => {
     e.preventDefault(e);
-    if (english === '' || russian === '' || chinese === '') {
+    if (english === '' || russian === '' || chinese === '' || pinyin === '') {
       alert('Please enter a word');
       return;
     }
@@ -39,11 +40,13 @@ function App() {
       english: english,
       russian: russian,
       chinese: chinese,
+      pinyin: pinyin,
       completed: false,
     });
     setEnglish('');
     setRussian('');
     setChinese('');
+    setPinyin('');
   };
 
   // Read 'word' from firebase
@@ -99,6 +102,14 @@ function App() {
             className={style.input}
             type='text'
             placeholder='Chinese word'
+          />
+
+          <input
+            value={pinyin}
+            onChange={(e) => setPinyin(e.target.value)}
+            className={style.input}
+            type='text'
+            placeholder='Pinyin'
           />
 
           <button className={style.button}>

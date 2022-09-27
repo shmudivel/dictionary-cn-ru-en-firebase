@@ -28,6 +28,9 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
         <p onClick={() => toggleComplete(word)} className={word.completed ? style.textComplete : style.text}>
           {word.chinese}
         </p>
+        <p onClick={() => toggleComplete(word)} className={word.completed ? style.textComplete : style.text}>
+          {word.pinyin}
+        </p>
       </div>
       <button onClick={() => deleteWord(word.id)}>{<FaRegTrashAlt />}</button>
     </li>
