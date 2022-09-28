@@ -132,7 +132,7 @@ function App() {
 
           {words.filter((word) => {
             if (searchTerm === "") {
-              return ''
+              
             } else if (
               word.english.toLowerCase().includes(searchTerm.toLowerCase())
               || word.russian.toLowerCase().includes(searchTerm.toLowerCase())
