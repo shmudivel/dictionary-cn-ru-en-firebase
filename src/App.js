@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 //import { AiOutlinePlus } from 'react-icons/ai';
-import Word from "./Word";
+import Word from "./components/Word";
 import { db } from "./firebase";
 import {
   query,
@@ -12,47 +12,24 @@ import {
 } from "firebase/firestore";
 import NewWordForm from "./components/NewWordForm";
 
+
 const style = {
-  bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#2F80ED] to-[#1CB5E0]`,
+  bg: `h-screen w-screen p-4 bg-gradient-to-l from-rose-900 to-purple-800`,
   container: `bg-slate-100 max-w-[600px] w-full m-auto rounded-md shadow-xl p-4`,
   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
   form: `p-2 justify-between`,
   input: `border p-2 w-full text-xl`,
-  button: `border text-2xl p-2 w-full bg-purple-500 hover:bg-purple-600 text-slate-100`,
+  button: `border text-2xl p-2 w-full bg-gradient-to-r from-rose-900 to-purple-400 hover:from-purple-400 hover:to-rose-900 text-slate-100`,
   count: `text-center p-2`,
 };
 
 function App() {
   const [words, setWords] = useState([]);
-  // const [english, setEnglish] = useState('');
-  // const [russian, setRussian] = useState('');
-  // const [chinese, setChinese] = useState('');
-  // const [pinyin, setPinyin] = useState('');
   // Search
   const [searchTerm, setSearchTerm] = useState("");
-
   // show form button
   const [isForm, setIsForm] = useState(false);
 
-  // // Create word
-  // const createWord = async (e) => {
-  //   e.preventDefault(e);
-  //   if (english === '' || russian === '' || chinese === '' || pinyin === '') {
-  //     alert('Please enter a word');
-  //     return;
-  //   }
-  //   await addDoc(collection(db, 'words'), {
-  //     english: english,
-  //     russian: russian,
-  //     chinese: chinese,
-  //     pinyin: pinyin,
-  //     completed: false,
-  //   });
-  //   setEnglish('');
-  //   setRussian('');
-  //   setChinese('');
-  //   setPinyin('');
-  // };
 
   // Read 'word' from firebase
   useEffect(() => {
@@ -82,17 +59,19 @@ function App() {
   return (
     <div className={style.bg}>
       <div className={style.container}>
-        <h3 className={style.heading}>Words App</h3>
+        <h3 className={style.heading}>Air-supply shaft dictionary</h3>
         <button
           className={style.button}
           onClick={() => {
             setIsForm(!isForm);
           }}
         >
-          {isForm ? "Close form" : "Add a new word"}
+          {isForm ? "Close form" : "Add new word"}
         </button>
 
         {isForm ? <NewWordForm /> : " "}
+
+          
 
         <ul>
           <input
@@ -104,6 +83,10 @@ function App() {
             placeholder="Search..."
           />
 
+          
+
+            
+
           {words
             .filter((word) => {
               if (searchTerm === "") {
@@ -114,7 +97,7 @@ function App() {
               ) {
                 return word;
               }
-              return "";
+
             })
             .map((word, index) => {
               return (
@@ -127,6 +110,9 @@ function App() {
               );
             })}
         </ul>
+
+
+        
         {words.length < 1 ? null : (
           <p
             className={style.count}
