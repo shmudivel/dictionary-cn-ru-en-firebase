@@ -11,6 +11,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import NewWordForm from "./Form /NewWordForm";
+import TableHeadWords from "./Tables/TableHeadWords";
 
 const style = {
     bg: `h-screen w-screen p-4 bg-gradient-to-l from-rose-900 to-purple-800`,
@@ -84,7 +85,7 @@ const MainComp = () => {
 
           
 
-            
+
 
           {words
             .filter((word) => {
