@@ -14,15 +14,15 @@ import MainComp from "./components/MainComp";
 // import NewWordForm from "./components/Form /NewWordForm";
 
 
-const style = {
-  bg: `h-screen w-screen p-4 bg-gradient-to-l from-rose-900 to-purple-800`,
-//   container: `bg-slate-100 max-w-[600px] w-full m-auto rounded-md shadow-xl p-4`,
-//   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
-//   form: `p-2 justify-between`,
-//   input: `border p-2 w-full text-xl`,
-//   button: `border text-2xl p-2 w-full bg-gradient-to-r from-rose-900 to-purple-400 hover:from-purple-400 hover:to-rose-900 text-slate-100`,
-//   count: `text-center p-2`,
-};
+// const style = {
+//   bg: `h-screen w-screen p-4 bg-gradient-to-l from-rose-900 to-purple-800`,
+// //   container: `bg-slate-100 max-w-[600px] w-full m-auto rounded-md shadow-xl p-4`,
+// //   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
+// //   form: `p-2 justify-between`,
+// //   input: `border p-2 w-full text-xl`,
+// //   button: `border text-2xl p-2 w-full bg-gradient-to-r from-rose-900 to-purple-400 hover:from-purple-400 hover:to-rose-900 text-slate-100`,
+// //   count: `text-center p-2`,
+// };
 
 function App() {
   // const [words, setWords] = useState([]);
@@ -58,7 +58,7 @@ function App() {
   // };
 
   return (
-    <div className={style.bg}>
+    <div>
 
       <MainComp />
       {/* <div className={style.container}>

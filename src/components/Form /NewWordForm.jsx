@@ -10,8 +10,8 @@ const style = {
   container: `bg-slate-100 max-w-[600px] w-full m-auto rounded-md shadow-xl p-4`,
   heading: `text-3xl font-bold text-center text-gray-800 p-2`,
   form: `p-2 justify-between`,
-  input: `border p-2 w-full text-xl`,
-  button: `border text-2xl p-2 w-full bg-purple-500 hover:bg-purple-600 text-slate-100`,
+  input: `border p-3 w-full text-xl`,
+  button: `text-2xl p-2 w-full bg-stone-700 text-slate-200`,
   count: `text-center p-2`,
 };
 
