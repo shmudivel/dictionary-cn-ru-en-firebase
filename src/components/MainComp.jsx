@@ -31,7 +31,19 @@ const MainComp = () => {
   const [isForm, setIsForm] = useState(false);
 
   // Read 'word' from firebase
-  useEffect(() => {
+  // useEffect(() => {
+  //   const q = query(collection(db, "words"));
+  //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
+  //     let wordsArr = [];
+  //     querySnapshot.forEach((doc) => {
+  //       wordsArr.push({ ...doc.data(), id: doc.id });
+  //     });
+  //     setWords(wordsArr);
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
+  const getWordsFromDB = () => {
+    console.log(searchTerm);
     const q = query(collection(db, "words"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       let wordsArr = [];
@@ -41,7 +53,14 @@ const MainComp = () => {
       setWords(wordsArr);
     });
     return () => unsubscribe();
-  }, []);
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      getWordsFromDB();
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
 
   // Update word in firebase
   const toggleComplete = async (word) => {
@@ -79,6 +98,7 @@ const MainComp = () => {
             type="text"
             placeholder="Search..."
           />
+          <input className="button" value="search" type="button" onClick={() => getWordsFromDB()} />
 
           <TableHeadWords />
 
@@ -90,8 +110,8 @@ const MainComp = () => {
                 word.russian.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 word.chinese.toLowerCase().includes(searchTerm.toLowerCase())
               ) {
+                return word;
               }
-              return word;
             })
             .map((word, index) => {
               return (
