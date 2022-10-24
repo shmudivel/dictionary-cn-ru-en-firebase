@@ -30,18 +30,7 @@ const MainComp = () => {
   // show form button
   const [isForm, setIsForm] = useState(false);
 
-  // Read 'word' from firebase
-  // useEffect(() => {
-  //   const q = query(collection(db, "words"));
-  //   const unsubscribe = onSnapshot(q, (querySnapshot) => {
-  //     let wordsArr = [];
-  //     querySnapshot.forEach((doc) => {
-  //       wordsArr.push({ ...doc.data(), id: doc.id });
-  //     });
-  //     setWords(wordsArr);
-  //   });
-  //   return () => unsubscribe();
-  // }, []);
+
   const getWordsFromDB = () => {
     console.log(searchTerm);
     const q = query(collection(db, "words"));

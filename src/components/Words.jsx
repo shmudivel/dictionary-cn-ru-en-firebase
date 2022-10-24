@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
+// import { FaRegTrashAlt } from "react-icons/fa";
 
 const style = {
   overallDiv: ``,
