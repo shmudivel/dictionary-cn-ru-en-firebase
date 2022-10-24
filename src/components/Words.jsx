@@ -46,11 +46,11 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
                 {word.chinese}  {word.pinyin}
                 
               </th>
-              <th className="w-6">
+              {/* <th className="w-6">
                 <button onClick={() => deleteWord(word.id)}>
                   {<FaRegTrashAlt />}
                 </button>
-              </th>
+              </th> */}
             </tr>
           </thead>
         </table>

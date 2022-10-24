@@ -46,6 +46,7 @@ const MainComp = () => {
     console.log(searchTerm);
     const q = query(collection(db, "words"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      console.log(querySnapshot);
       let wordsArr = [];
       querySnapshot.forEach((doc) => {
         wordsArr.push({ ...doc.data(), id: doc.id });
@@ -60,7 +61,7 @@ const MainComp = () => {
       getWordsFromDB();
     }, 1000);
     return () => clearTimeout(timer);
-  }, [searchTerm]);
+  }, []);
 
   // Update word in firebase
   const toggleComplete = async (word) => {
@@ -98,7 +99,7 @@ const MainComp = () => {
             type="text"
             placeholder="Search..."
           />
-          <input className="button" value="search" type="button" onClick={() => getWordsFromDB()} />
+          {/* <input className="button" value="search" type="button" onClick={() => getWordsFromDB()} /> */}
 
           <TableHeadWords />
 
