@@ -6,11 +6,14 @@ const style = {
   li: `border-b-2 table-fixed w-full`,
   tr: ``,
   // liComplete: `w-full text-sm text-left text-gray-500 dark:text-gray-400 bg-slate-400 capitalize`,
+  
   textEn: `py-5 px-5`,
   textRu: `py-5 px-5`,
   textCn: `py-5 px-5`,
   // textComplete: ` cursor-pointer line-through`,
   button: `cursor-pointer flex items-center`,
+
+  textComplete: `text-red-900 cursor-pointer line-through `
 };
 
 const Word = ({ word, toggleComplete, deleteWord }) => {
