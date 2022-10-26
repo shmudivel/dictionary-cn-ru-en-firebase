@@ -1,3 +1,5 @@
+Demo: http://shmudivel.github.io/dictionary-cn-ru-en-firebase
+
 xlsx to csv through "rowy" to firestore-firebase
 https://www.rowy.io/blog/import-csv-to-firestore
 
