@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dictionary-cn-ru-en-firebase/static/css/main.f04666c8.css",
+    "main.js": "/dictionary-cn-ru-en-firebase/static/js/main.f4a43246.js",
+    "index.html": "/dictionary-cn-ru-en-firebase/index.html",
+    "main.f04666c8.css.map": "/dictionary-cn-ru-en-firebase/static/css/main.f04666c8.css.map",
+    "main.f4a43246.js.map": "/dictionary-cn-ru-en-firebase/static/js/main.f4a43246.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f04666c8.css",
+    "static/js/main.f4a43246.js"
+  ]
+}
