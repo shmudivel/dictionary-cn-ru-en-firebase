@@ -1,11 +1,14 @@
 import React from "react";
 // import { FaRegTrashAlt } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 const style = {
   overallDiv: ``,
   li: `border-b-2 table-fixed w-full`,
   tr: ``,
-  // liComplete: `w-full text-sm text-left text-gray-500 dark:text-gray-400 bg-slate-400 capitalize`,
+  liComplete: `border-b-2 table-fixed w-full line-through`,
   
   textEn: `py-5 px-5`,
   textRu: `py-5 px-5`,
@@ -13,7 +16,7 @@ const style = {
   // textComplete: ` cursor-pointer line-through`,
   button: `cursor-pointer flex items-center`,
 
-  textComplete: `text-red-900 cursor-pointer line-through `
+  // textComplete: `text-red-900 cursor-pointer line-through `
 };
 
 const Word = ({ word, toggleComplete, deleteWord }) => {
@@ -25,6 +28,7 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
             <tr className={style.tr}>
               <th className="w-6">
                 <input
+                className="h-6 w-6 border-2  rounded-xl"
                   onChange={() => toggleComplete(word)}
                   type="checkbox"
                   checked={word.completed ? "checked" : ""}
