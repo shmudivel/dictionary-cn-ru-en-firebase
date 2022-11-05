@@ -7,13 +7,14 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDEAjUwFC4YmNFn_ooG-bb1nyxMs8u0Nco",
-  authDomain: "shaft-dictionary-webapp.firebaseapp.com",
-  projectId: "shaft-dictionary-webapp",
-  storageBucket: "shaft-dictionary-webapp.appspot.com",
-  messagingSenderId: "1018268022730",
-  appId: "1:1018268022730:web:4c2648a9a7aa521ffa4133"
+  apiKey: "AIzaSyChzarOvAFbqTbGEsOv8-TE-s84iG66dMM",
+  authDomain: "shaft051122-dictionary.firebaseapp.com",
+  projectId: "shaft051122-dictionary",
+  storageBucket: "shaft051122-dictionary.appspot.com",
+  messagingSenderId: "770652619773",
+  appId: "1:770652619773:web:298be43751936c24410f94"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
