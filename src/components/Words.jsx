@@ -26,7 +26,7 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
         <table className={word.completed ? style.liComplete : style.li}>
           <thead>
             <tr className={style.tr}>
-              <th className="">
+              <th className="w-1 h-1">
                 <input
                 className="h-4 w-4 border-4  rounded-xl"
                   onChange={() => toggleComplete(word)}
