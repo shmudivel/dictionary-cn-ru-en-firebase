@@ -26,9 +26,9 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
         <table className={word.completed ? style.liComplete : style.li}>
           <thead>
             <tr className={style.tr}>
-              <th className="w-4">
+              <th className="">
                 <input
-                className="h-5 w-5 border-4  rounded-xl"
+                className="h-4 w-4 border-4  rounded-xl"
                   onChange={() => toggleComplete(word)}
                   type="checkbox"
                   checked={word.completed ? "checked" : ""}
