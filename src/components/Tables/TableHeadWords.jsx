@@ -5,15 +5,15 @@ const TableHeadWords = () => {
     <>
       <div className="overflow-x-auto relative shadow-md">
         <table className="table-fixed w-full ">
-          <thead className="sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl uppercase bg-stone-700 text-slate-200 ">
+          <thead className=" uppercase bg-stone-700 text-slate-200 ">
             <tr>
-              <th scope="col" className="w-fit text-xs  ">
+              <th scope="col" className="w-fit sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl  ">
                 English
               </th>
-              <th scope="col" className="w-fit text-xs  ">
+              <th scope="col" className="w-fit sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl  ">
                 Russian
               </th>
-              <th scope="col" className="w-fit text-xs   ">
+              <th scope="col" className="w-fit sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl   ">
                 Chinese
               </th>
             </tr>
