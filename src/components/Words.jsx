@@ -1,18 +1,18 @@
 import React from "react";
 // import { FaRegTrashAlt } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 const style = {
   overallDiv: ``,
-  li: `border-b-2 table-fixed w-full`,
+  li: `border-b-[1px] table-fixed w-full`,
   tr: ``,
-  liComplete: `border-b-2 table-fixed w-full line-through`,
+  liComplete: `border-b-[1px] table-fixed w-full line-through`,
   
-  textEn: `py-5 px-5`,
-  textRu: `py-5 px-5`,
-  textCn: `py-5 px-5`,
+  textEn: `w-fit text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
+  textRu: `w-fit text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
+  textCn: `w-fit text-[0.50rem]  sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
   // textComplete: ` cursor-pointer line-through`,
   button: `cursor-pointer flex items-center`,
 
@@ -26,9 +26,9 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
         <table className={word.completed ? style.liComplete : style.li}>
           <thead>
             <tr className={style.tr}>
-              <th className="w-6">
+              <th className="w-4">
                 <input
-                className="h-6 w-6 border-2  rounded-xl"
+                className="h-5 w-5 border-4  rounded-xl"
                   onChange={() => toggleComplete(word)}
                   type="checkbox"
                   checked={word.completed ? "checked" : ""}

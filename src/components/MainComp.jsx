@@ -15,11 +15,11 @@ import TableHeadWords from "./Tables/TableHeadWords";
 
 const style = {
   bg: `h-screen w-screen p-4 bg-zinc-800`,
-  container: `bg-zinc-500 max-w-[600px] w-full m-auto rounded-md shadow-xl p-4`,
-  heading: `text-3xl font-bold text-center text-[#fffffe] p-2`,
+  container: `bg-zinc-500 max-lg w-full m-auto rounded-md shadow-xl p-4`,
+  heading: `text-2xl font-bold text-center text-[#fffffe] p-2`,
   form: `p-2 justify-between`,
   input: `p-2 w-full text-xl bg-slate-100 text-white-200`,
-  button: ` text-2xl p-2 w-full bg-stone-700 text-slate-200`,
+  button: ` text-xl p-2 w-full bg-stone-700 text-slate-200`,
   count: `text-center p-2`,
 };
 
