@@ -15,7 +15,7 @@ import TableHeadWords from "./Tables/TableHeadWords";
 
 const style = {
   bg: `h-screen w-screen p-4 bg-zinc-800`,
-  container: `bg-zinc-500 max-lg w-full m-auto rounded-md shadow-xl p-4`,
+  container: `bg-zinc-500  xl:w-4/5 m-auto rounded-md shadow-xl p-4`,
   heading: `text-2xl font-bold text-center text-[#fffffe] p-2`,
   form: `p-2 justify-between`,
   input: `p-2 w-full text-xl bg-slate-100 text-white-200`,
