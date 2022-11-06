@@ -7,12 +7,12 @@ import React from "react";
 const style = {
   overallDiv: ``,
   li: `border-b-[1px] table-fixed w-full`,
-  tr: ``,
+  tr: `w-full`,
   liComplete: `border-b-[1px] table-fixed w-full line-through`,
   
-  textEn: `w-fit text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
-  textRu: `w-fit text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
-  textCn: `w-fit text-[0.50rem]  sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
+  textEn: `text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
+  textRu: `text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
+  textCn: `text-[0.50rem]  sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
   // textComplete: ` cursor-pointer line-through`,
   button: `cursor-pointer flex items-center`,
 
@@ -26,9 +26,9 @@ const Word = ({ word, toggleComplete, deleteWord }) => {
         <table className={word.completed ? style.liComplete : style.li}>
           <thead>
             <tr className={style.tr}>
-              <th className="w-1 h-1">
+              <th className="w-2">
                 <input
-                className="h-4 w-4 border-4  rounded-xl"
+                className="h-4 w-3 rounded-xl"
                   onChange={() => toggleComplete(word)}
                   type="checkbox"
                   checked={word.completed ? "checked" : ""}
