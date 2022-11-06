@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dictionary-cn-ru-en-firebase/static/css/main.9d4abbd1.css",
-    "main.js": "/dictionary-cn-ru-en-firebase/static/js/main.7494b89c.js",
+    "main.css": "/dictionary-cn-ru-en-firebase/static/css/main.c6d06905.css",
+    "main.js": "/dictionary-cn-ru-en-firebase/static/js/main.85602323.js",
     "index.html": "/dictionary-cn-ru-en-firebase/index.html",
-    "main.9d4abbd1.css.map": "/dictionary-cn-ru-en-firebase/static/css/main.9d4abbd1.css.map",
-    "main.7494b89c.js.map": "/dictionary-cn-ru-en-firebase/static/js/main.7494b89c.js.map"
+    "main.c6d06905.css.map": "/dictionary-cn-ru-en-firebase/static/css/main.c6d06905.css.map",
+    "main.85602323.js.map": "/dictionary-cn-ru-en-firebase/static/js/main.85602323.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d4abbd1.css",
-    "static/js/main.7494b89c.js"
+    "static/css/main.c6d06905.css",
+    "static/js/main.85602323.js"
   ]
 }
