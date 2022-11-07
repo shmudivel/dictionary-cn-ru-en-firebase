@@ -14,9 +14,9 @@ import NewWordForm from "./Form /NewWordForm";
 import TableHeadWords from "./Tables/TableHeadWords";
 
 const style = {
-  bg: `h-screen w-screen p-4 bg-zinc-800`,
-  container: `bg-zinc-500 sm:w-fit lg:w-4/5 m-auto rounded-md shadow-xl p-4`,
-  heading: `text-3xl font-bold text-center text-[#fffffe] p-2`,
+  bg: `min-h-screen w-screen p-4 bg-zinc-800`,
+  container: `bg-zinc-400 sm:w-fit lg:w-4/5 m-auto rounded-md shadow-xl p-4`,
+  heading: `text-3xl font-bold text-center text-white p-2`,
   form: `p-2 justify-between`,
   input: `p-2 w-full text-xl bg-slate-100 text-white-200`,
   button: ` text-2xl p-2 w-full bg-stone-700 text-slate-200`,

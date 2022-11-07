@@ -8,7 +8,7 @@ const style = {
   overallDiv: ``,
   li: `border-b-[1px] table-fixed w-full`,
   tr: `w-full`,
-  liComplete: `border-b-[1px] table-fixed w-full line-through`,
+  liComplete: `text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2 border-b-[1px] table-fixed w-full line-through text-red-700`,
   
   textEn: `text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
   textRu: `text-[0.50rem] sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl p-2`,
