@@ -30,7 +30,6 @@ const MainComp = () => {
   // show form button
   const [isForm, setIsForm] = useState(false);
 
-
   const getWordsFromDB = () => {
     console.log(searchTerm);
     const q = query(collection(db, "words"));
@@ -43,7 +42,7 @@ const MainComp = () => {
       setWords(wordsArr);
     });
     return () => unsubscribe();
-  }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
